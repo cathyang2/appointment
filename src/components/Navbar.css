@@ -1,69 +1,92 @@
-/* src/components/Navbar.css */
-
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #4C8FBD;
-    padding: 15px 30px;
-    color: #F7F7F7;
-  }
-  
-  .nav-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  padding: 15px 30px;
+  color: #fff;
+  transition: background 0.3s ease;
+  position: sticky;   /* makes it stick */
+  top: 0;             /* sticks to the very top */
+  z-index: 1000;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+.navbar:hover {
+  background: #4c8fbd; /* darker shade */
+}
+
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 6px 12px; /* add some padding for hover effect */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* ✨ Hover effect */
+.nav-links li a:hover {
+  color: #fff;
+  background: #000000; /* darker blue on hover */
+  transform: scale(1.05); /* slight zoom */
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
   .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    transition: color 0.3s;
-  }
-  
-  .nav-links li a:hover {
-    color: #38bdf8;
-  }
-  
-  /* Hamburger menu */
-  .hamburger {
-    display: none;
+    position: absolute;
+    top: 60px;
+    right: -100%;
     flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
+    background: #1e293b;
+    width: 200px;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
   }
-  
-  .hamburger span {
-    width: 25px;
-    height: 3px;
-    background: white;
+
+  .nav-links li a {
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
   }
-  
-  /* Mobile view */
-  @media (max-width: 768px) {
-    .nav-links {
-      position: absolute;
-      top: 60px;
-      right: -100%;
-      flex-direction: column;
-      background: #1e293b;
-      width: 200px;
-      padding: 20px;
-      transition: right 0.3s ease-in-out;
-    }
-  
-    .nav-links.open {
-      right: 0;
-    }
-  
-    .hamburger {
-      display: flex;
-    }
+
+  .nav-links li a:hover {
+    background: #38bdf8; /* lighter hover on mobile */
+    color: #1e293b;
   }
-  
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
