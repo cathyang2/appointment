@@ -43,45 +43,81 @@
  
   .features {
     padding: 60px 20px;
-    text-align: center;
     background: #f8fafc;
+    text-align: center;
   }
   
   .features h2 {
     font-size: 2rem;
     margin-bottom: 40px;
+    color: #333;
   }
   
   .features-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
   }
   
-  .feature-card {
-    background: white;
+  .feature-category {
+    background: #fff;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1 1 250px;
-    max-width: 300px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-    cursor: pointer;
-  }
-
-  .feature-card:hover {
-    transform: translateY(-8px); /* lifts up */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
-    border: 1px solid #38bdf8; /* highlight border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .feature-card h3 {
-    color: #4c8fbd;
-    margin-bottom: 10px;
+  .feature-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
   }
-
-
+  
+  .feature-category h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #2563eb;
+  }
+  
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .service-card {
+    background: #f1f5f9;
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .service-card:hover {
+    background: #38bdf8;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  .service-card span {
+    font-size: 0.65rem;
+    color: gray;
+    font-weight: 600;
+  }
+  
+  .service-card:hover span {
+    color: #fff;
+  }
   
  
   .footer {
@@ -95,13 +131,19 @@
 .doctors {
   padding: 60px 20px;
   text-align: center;
-  background: #f1f5f9;
+  background: lightgray;
 }
 
 .doctors h2 {
   font-size: 2rem;
   margin-bottom: 30px;
 }
+.doctor-info {
+  color: #6b7280; /* Tailwind's gray-500 */
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
 
 .doctor-card {
   background: white;
@@ -114,14 +156,14 @@
 }
 
 .doctor-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-15px);
 }
 
 .doctor-img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  margin-bottom: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover;  /* keeps aspect ratio */
 }
 
 .doctor-btn {
