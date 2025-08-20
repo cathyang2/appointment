@@ -12,8 +12,8 @@ export default function Navbar() {
       <ul className={isOpen ? "nav-links open" : "nav-links"}>
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/contact">Contacts</a></li>
+        <li><a href="/services">Login</a></li>
+        <li><a href="/contact">Sign Up</a></li>
       </ul>
 
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
@@ -24,4 +24,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
 
