@@ -76,7 +76,7 @@
   .feature-category h3 {
     font-size: 1.3rem;
     margin-bottom: 15px;
-    color: #2563eb;
+    color: #6481b1;
   }
   
   .service-grid {
@@ -119,7 +119,14 @@
     color: #fff;
   }
   
- 
+  .doctor-avatar {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; /* circular */
+    margin-top: 8px;
+    object-fit: cover;
+    border: 2px solid #4c8fbd; /* optional border to make it stand out */
+  }
   .footer {
     background: #1e293b;
     color: white;
