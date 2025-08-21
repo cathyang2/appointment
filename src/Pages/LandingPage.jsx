@@ -18,8 +18,9 @@ export default function LandingPage() {
         </div>
       </section>
 
+      
       {/* Services Section */}
-      <section className="features">
+<section className="features">
   <h2>Services</h2>
   <div className="features-container">
 
@@ -30,10 +31,12 @@ export default function LandingPage() {
         <div className="service-card">
           <p>Consultation</p>
           <span>1 Doctor Available</span>
+          <img src={zaiDoctor} alt="Dr. Zai" className="doctor-avatar" />
         </div>
         <div className="service-card">
           <p>General Checkup</p>
           <span>1 Doctor Available</span>
+          <img src={zaiDoctor} alt="Dr. Zai" className="doctor-avatar" />
         </div>
       </div>
     </div>
@@ -45,6 +48,7 @@ export default function LandingPage() {
         <div className="service-card">
           <p>50-Minute Session</p>
           <span>1 Doctor Available</span>
+          <img src={zaiDoctor} alt="Dr. Zai" className="doctor-avatar" />
         </div>
       </div>
     </div>
@@ -56,14 +60,17 @@ export default function LandingPage() {
         <div className="service-card">
           <p>Cosmetic Dentistry</p>
           <span>1 Doctor Available</span>
+          <img src={zaiDoctor} alt="Dr. Zai" className="doctor-avatar" />
         </div>
         <div className="service-card">
           <p>Teeth Whitening</p>
           <span>1 Doctor Available</span>
+          <img src={zaiDoctor} alt="Dr. Zai" className="doctor-avatar" />
         </div>
         <div className="service-card">
           <p>Braces & Invisalign</p>
           <span>1 Doctor Available</span>
+          <img src={zaiDoctor} alt="Dr. Zai" className="doctor-avatar" />
         </div>
       </div>
     </div>
@@ -75,22 +82,27 @@ export default function LandingPage() {
         <div className="service-card">
           <p>Skin Whitening</p>
           <span>1 Doctor Available</span>
+          <img src={zaiDoctor} alt="Dr. Zai" className="doctor-avatar" />
         </div>
         <div className="service-card">
           <p>Hydration</p>
           <span>1 Doctor Available</span>
+          <img src={zaiDoctor} alt="Dr. Zai" className="doctor-avatar" />
         </div>
         <div className="service-card">
           <p>Skin Cleaner</p>
           <span>1 Doctor Available</span>
+          <img src={zaiDoctor} alt="Dr. Zai" className="doctor-avatar" />
         </div>
         <div className="service-card">
           <p>Testing</p>
           <span>1 Doctor Available</span>
+          <img src={zaiDoctor} alt="Dr. Zai"  className="doctor-avatar" />
         </div>
         <div className="service-card">
           <p>General Checkups</p>
           <span>1 Doctor Available</span>
+          <img src={zaiDoctor} alt="Dr. Zai" className="doctor-avatar" />
         </div>
       </div>
     </div>
@@ -102,7 +114,7 @@ export default function LandingPage() {
 
 
       {/* Doctors Section */}
-      <section className="doctors">
+    <section className="doctors">
   <h2>Doctor</h2>
   <div className="doctor-card">
     <img
